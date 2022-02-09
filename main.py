@@ -11,7 +11,6 @@ while (True):
     conts, heir = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     if conts:
         cv2.drawContours(frame, conts, -1, (255, 0, 0), 5)
-        # print(conts)
     cv2.imshow("Frame", frame)
     if cv2.waitKey(1) == ord('q'):
         break
